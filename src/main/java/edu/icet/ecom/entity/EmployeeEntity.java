@@ -12,8 +12,8 @@ import java.time.LocalDateTime;
 @Entity
 @Table(name = "employee_entity")
     public class EmployeeEntity {
-@Id
-@GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
         private Long id;
         private String name;
         private String email;

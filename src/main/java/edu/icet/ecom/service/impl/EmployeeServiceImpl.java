@@ -37,4 +37,9 @@ public class EmployeeServiceImpl implements EmployeeService {
     public void deleteEmployee(Long id) {
         repository.deleteById(id);
     }
+
+    @Override
+    public void updateEmployee(Employee employee) {
+        repository.save(mapper.map(employee, EmployeeEntity.class));
+    }
 }

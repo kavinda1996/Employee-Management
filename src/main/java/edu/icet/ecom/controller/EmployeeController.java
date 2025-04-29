@@ -30,4 +30,9 @@ public void addEmployee(@RequestBody Employee employee){
     public void deleteEmployee(@PathVariable Long id){
         service.deleteEmployee(id);
     }
+
+    @PostMapping("/update-employee")
+    public void updateEmployee(@RequestBody Employee employee){
+        service.updateEmployee(employee);
+    }
 }
