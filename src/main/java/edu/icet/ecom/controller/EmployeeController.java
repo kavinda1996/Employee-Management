@@ -21,8 +21,13 @@ public void addEmployee(@RequestBody Employee employee){
     service.addEmployee(employee);
     }
 
-    @GetMapping("get-all")
+    @GetMapping("/get-all")
     public List<Employee> getAll(){
         return service.getAll();
+    }
+
+    @DeleteMapping("/delete/{id}")
+    public void deleteEmployee(@PathVariable Long id){
+        service.deleteEmployee(id);
     }
 }
