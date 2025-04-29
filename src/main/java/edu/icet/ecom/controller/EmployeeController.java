@@ -6,6 +6,8 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/employee")
 @RequiredArgsConstructor
@@ -17,5 +19,10 @@ final EmployeeService service;
     @ResponseStatus(HttpStatus.CREATED)
 public void addEmployee(@RequestBody Employee employee){
     service.addEmployee(employee);
+    }
+
+    @GetMapping("get-all")
+    public List<Employee> getAll(){
+        return service.getAll();
     }
 }
