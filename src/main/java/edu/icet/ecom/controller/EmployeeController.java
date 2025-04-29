@@ -31,7 +31,7 @@ public void addEmployee(@RequestBody Employee employee){
         service.deleteEmployee(id);
     }
 
-    @PostMapping("/update-employee")
+    @PutMapping("/update-employee")
     public void updateEmployee(@RequestBody Employee employee){
         service.updateEmployee(employee);
     }
